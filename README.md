@@ -19,7 +19,7 @@ Developer-Guidelines
 
 ## HTML
 - MoDuLaR
-- Bad code examples (e.g. <br>)
+- Bad code examples (e.g. br)
 - Indentation
 - Bugfixes for older browsers (e.g. inline block IE7) adding IE stylesheet if needed conditional
 - Markup examples
@@ -29,7 +29,7 @@ Developer-Guidelines
 - <!DOCTYPE html>
 - Clean light might up to ensure good SEO and maintainability
 - Use of HTML5
-- <strong> and <em> over <b> and <i> as provide strong/emphasised hints to screen reading software
+- strong and em over b and i as provide strong/emphasised hints to screen reading software
 - Overuse of structural markup - cleaner the better, target individual elements
 - Cache-busting string
 - Use of double quotes
