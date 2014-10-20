@@ -51,49 +51,49 @@ We can make use of classes and ID’s in order to style our HTML markup. If ID�
 
 We should make good use of indenting and whitespace and ‘blocks’ of HTML to ensure our code is easily readable and maintainable. Grouping elements that appear together on the page and introducing whitespace between ‘blocks’ of content. 
 
-<div id=“i-am-unique” class=“top-header”>
+	<div id=“i-am-unique” class=“top-header”>
 
-	<div class=“top-header__user-info”>
+		<div class=“top-header__user-info”>
 
-		<h1>Joe Bloggs</h1>
-		<p>A badass developer</p>
+			<h1>Joe Bloggs</h1>
+			<p>A badass developer</p>
 
-	</div>
-
-</div>
-
-<div class=“main-body”>
-
-	<div class=“main-body__content”>
-
-		<h1>Page title</h1>
-		<p>Some text</p>
-
-	</div>
-	
-	<div class=“main-body__sidebar”>
-
-		<ul>
-			<li>list item 1</li>
-			<li>list item 2</li>
-			<li>list item 3</li>
-		</ul>
+		</div>
 
 	</div>
 
-</div>
+	<div class=“main-body”>
+
+		<div class=“main-body__content”>
+
+			<h1>Page title</h1>
+			<p>Some text</p>
+
+		</div>
+		
+		<div class=“main-body__sidebar”>
+
+			<ul>
+				<li>list item 1</li>
+				<li>list item 2</li>
+				<li>list item 3</li>
+			</ul>
+
+		</div>
+
+	</div>
 
 HTML should be kept as clean and light as possible to ensure speed, maintainability. (and good SEO?) Consider the following.
 
-<div class=“logo”>
+	<div class=“logo”>
 
-	<img src=“logo.jpg” />
+		<img src=“logo.jpg” />
 
-</div>
+	</div>
 
 It would be much better to add the class to the image instead. Targeting individual elements means less markup, less css nesting and more efficient code.
 
-<img src=“logo.jpg” class=“logo” />
+	<img src=“logo.jpg” class=“logo” />
 
 ### Naming convention
 HTML semantics and FE architecture is a difficult task that requires a naming convention in order to ensure that our projects scale well and are maintainable. You can read more about that here.
@@ -108,23 +108,23 @@ In brief
 
 Example
 
-<div class=“top-bar top-bar- -blue”>
+	<div class=“top-bar top-bar- -blue”>
 
-	<div class=“top-bar__info”>
+		<div class=“top-bar__info”>
 
-		<h2>Company name</h2>
-		<p>Company address</p>
+			<h2>Company name</h2>
+			<p>Company address</p>
+
+		</div>
+
+		<div class=“top-bar__info top-bar__info- -right”>
+
+			<h2>Company name on the right</h2>
+			<p>Company address on the right</p>
+
+		</div>
 
 	</div>
-
-	<div class=“top-bar__info top-bar__info- -right”>
-
-		<h2>Company name on the right</h2>
-		<p>Company address on the right</p>
-
-	</div>
-
-</div>
 
 ### Internet Explorer
 As previously mentioned we support IE 8 and above. We may go lower than that, depending on the client.
