@@ -28,14 +28,15 @@ Our markup should be well presented, semantically correct and generally valid. W
 ### Basics
 - We make use of <!DOCTYPE html> which is supported in all browsers.
 - We use “double” quotes in our HTML
-- We use <strong> and <em> over <b> and <i> as provide strong/emphasised hints to screen reading software
-- We don’t use any HTML for styling purposes such as <br>
+- We use strong and em over b and i as provide strong/emphasised hints to screen reading software
+- We don’t use any HTML for styling purposes such as < br >
 
 ### HTML5
 Where possible we should look to make use of HTML5 markup. However given that we still support IE8 as default we don’t generally use HTML5 as it would require extra code/bloat in order to make it work. If the client requests HTML5 and support for lower browsers then that’s something we need to consider. Here are some solutions.
 
 HTML5 shiv is a HTML5 IE enabling script. It can be downloaded here, and added to our webpages. The conditional tags ensure that it’s only read by non HTML5 supporting browsers (lower than IE9).
 https://code.google.com/p/html5shiv/
+
 	<!--[if lt IE 9]>
 	<script src="dist/html5shiv.js"></script>
 	<![endif]-->
