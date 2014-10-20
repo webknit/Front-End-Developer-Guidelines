@@ -2,22 +2,132 @@ Developer-Guidelines
 ====================
 
 ## Categories
-### Introduction
+## Introduction
 These developer guidelines attempt to outline fundamental aspects of the FE development process. They aim to ensure the team is consistent in all the work that we produce. We aim to continuously update the guidelines as new practices and technologies develop, this provides us with an excellent opportunity to stay on top of our game.
 While some of the rules in this document are personal preference we have agreed on them in over to ensure we’re all on the same wavelength. If you feel something is missing, inaccurate or incorrect then speak up and make yourself heard!
 
-#### Catering
-##### Desktop
+## Catering
+### Desktop
 By default we develop for current (two previous?) versions of major desktop browsers such Safari, Chrome, Internet Explorer (IE), Firefox and Opera. We also test to ensure IE8 for Windows users get an appropriate, possibly different, experience.
 Requests outside of our default specifications need to be discussed and the appropriate timings allocated.
 
-##### Mobile
+### Mobile
 Testing popular small-screen devices is essential in ensuring that a person’s experience of a design is appropriate to the capabilities of the device they’re using. We test our work in:
 - iOS: Safari, Google Chrome and Opera Mini
 - Android 4.1: Google Chrome, Firefox and Opera Mini 
 
+## Basics
+- We use 4 spaces per indentation level. We **never** mix tabs and spaces.
+- We keep our content, presentation and behaviour separate.
+- We prefer readability over compression, especially with compile tools. 
+- We avoid using !important at all times when building from scratch. If you’re having to add that then you need to go back and rework your code. There may be **rare** exceptions when code is out of our control.
+
+## HTML
+Our markup should be well presented, semantically correct and generally valid. We should be writing code that is equally as easy for us developers to read as it is the browser.
+
 ### Basics
-We use 4 spaces per indentation level. We **never** mix tabs and spaces.
+- We make use of <!DOCTYPE html> which is supported in all browsers.
+- We use “double” quotes in our HTML
+- We use <strong> and <em> over <b> and <i> as provide strong/emphasised hints to screen reading software
+- We don’t use any HTML for styling purposes such as <br>
+
+### HTML5
+Where possible we should look to make use of HTML5 markup. However given that we still support IE8 as default we don’t generally use HTML5 as it would require extra code/bloat in order to make it work. If the client requests HTML5 and support for lower browsers then that’s something we need to consider. Here are some solutions.
+
+HTML5 shiv is a HTML5 IE enabling script. It can be downloaded here, and added to our webpages. The conditional tags ensure that it’s only read by non HTML5 supporting browsers (lower than IE9).
+https://code.google.com/p/html5shiv/
+	<!--[if lt IE 9]>
+	<script src="dist/html5shiv.js"></script>
+	<![endif]-->
+
+If for some strange reason we need to support media queries in  < IE8 - E.g for demo purposes client side - we could use something like respond.js with the conditional tags as above.
+https://github.com/scottjehl/Respond
+**However** this method is not good practice and should only be used upon client request.
+
+### HTML structure
+We should write HTML that is semantic and relevant. Making use of BEM to ensure the “meaning” of our markup is clear when a developer reads it.
+
+We can make use of classes and ID’s in order to style our HTML markup. If ID’s are used they should be used properly and completely unique whilst considering any potential specificity issues. In an ideal world we would use classes for styling and ID’s for JS/anchor functionality. Inline style attributes are to be **avoided**.
+
+We should make good use of indenting and whitespace and ‘blocks’ of HTML to ensure our code is easily readable and maintainable. Grouping elements that appear together on the page and introducing whitespace between ‘blocks’ of content. 
+
+<div id=“i-am-unique” class=“top-header”>
+
+	<div class=“top-header__user-info”>
+
+		<h1>Joe Bloggs</h1>
+		<p>A badass developer</p>
+
+	</div>
+
+</div>
+
+<div class=“main-body”>
+
+	<div class=“main-body__content”>
+
+		<h1>Page title</h1>
+		<p>Some text</p>
+
+	</div>
+	
+	<div class=“main-body__sidebar”>
+
+		<ul>
+			<li>list item 1</li>
+			<li>list item 2</li>
+			<li>list item 3</li>
+		</ul>
+
+	</div>
+
+</div>
+
+HTML should be kept as clean and light as possible to ensure speed, maintainability. (and good SEO?) Consider the following.
+
+<div class=“logo”>
+
+	<img src=“logo.jpg” />
+
+</div>
+
+It would be much better to add the class to the image instead. Targeting individual elements means less markup, less css nesting and more efficient code.
+
+<img src=“logo.jpg” class=“logo” />
+
+### Naming convention
+HTML semantics and FE architecture is a difficult task that requires a naming convention in order to ensure that our projects scale well and are maintainable. You can read more about that here.
+http://brettjankord.com/2013/03/06/more-thoughts-on-html-class-naming-conventions/
+
+Although there are lots of naming conventions we make use of BEM (block, element, modifier). Theres an excellent post on that here.http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
+
+In brief
+- block - represents the parent
+- element - represents a child of the block 
+- modifier represents a different state or version of block
+
+Example
+
+<div class=“top-bar top-bar- -blue”>
+
+	<div class=“top-bar__info”>
+
+		<h2>Company name</h2>
+		<p>Company address</p>
+
+	</div>
+
+	<div class=“top-bar__info top-bar__info- -right”>
+
+		<h2>Company name on the right</h2>
+		<p>Company address on the right</p>
+
+	</div>
+
+</div>
+
+### Internet Explorer
+As previously mentioned we support IE 8 and above. We may go lower than that, depending on the client.
 
 
 - General
