@@ -146,13 +146,14 @@ As previously outlined in the document it is very difficult to make IE8 and lowe
 ### Folder structure
 Whilst this is a personal preference. It’s important that all HTML projects are structured the same in order to ensure that it’s easy for us to pick projects up, we are aware of what’s where and so that automation tools such as grunt will always run correctly. Our structure looks like the following (need to check this)
 
-* index.html
-* style.css
-* assets
-** js
-** SASS
-** img
-
+```
+index.html
+style.css
+assets
+	js
+	SASS
+	img
+```
  
 
 
