@@ -1,7 +1,7 @@
 Developer-Guidelines
 ====================
 
-## Categories
+
 ## Introduction
 These developer guidelines attempt to outline fundamental aspects of the FE development process. They aim to ensure the team is consistent in all the work that we produce. We aim to continuously update the guidelines as new practices and technologies develop, this provides us with an excellent opportunity to stay on top of our game.
 While some of the rules in this document are personal preference we have agreed on them in over to ensure we’re all on the same wavelength. If you feel something is missing, inaccurate or incorrect then speak up and make yourself heard!
@@ -28,8 +28,8 @@ Our markup should be well presented, semantically correct and generally valid. W
 ### Basics
 - We make use of <!DOCTYPE html> which is supported in all browsers.
 - We use “double” quotes in our HTML
-- We use strong and em over b and i as provide strong/emphasised hints to screen reading software
-- We don’t use any HTML for styling purposes such as < br >
+- We use <strong> and <em> over <b> and <i> as provide strong/emphasised hints to screen reading software
+- We don’t use any HTML for styling purposes such as <br>
 
 ### HTML5
 Where possible we should look to make use of HTML5 markup. However given that we still support IE8 as default we don’t generally use HTML5 as it would require extra code/bloat in order to make it work. If the client requests HTML5 and support for lower browsers then that’s something we need to consider. Here are some solutions.
@@ -52,49 +52,55 @@ We can make use of classes and ID’s in order to style our HTML markup. If ID�
 
 We should make good use of indenting and whitespace and ‘blocks’ of HTML to ensure our code is easily readable and maintainable. Grouping elements that appear together on the page and introducing whitespace between ‘blocks’ of content. 
 
-	<div id=“i-am-unique” class=“top-header”>
+```
+<div id=“i-am-unique” class=“top-header”>
 
-		<div class=“top-header__user-info”>
+	<div class=“top-header__user-info”>
 
-			<h1>Joe Bloggs</h1>
-			<p>A badass developer</p>
+		<h1>Joe Bloggs</h1>
+		<p>A badass developer</p>
 
-		</div>
+	</div>
+
+</div>
+
+<div class=“main-body”>
+
+	<div class=“main-body__content”>
+
+		<h1>Page title</h1>
+		<p>Some text</p>
+
+	</div>
+	
+	<div class=“main-body__sidebar”>
+
+		<ul>
+			<li>list item 1</li>
+			<li>list item 2</li>
+			<li>list item 3</li>
+		</ul>
 
 	</div>
 
-	<div class=“main-body”>
-
-		<div class=“main-body__content”>
-
-			<h1>Page title</h1>
-			<p>Some text</p>
-
-		</div>
-		
-		<div class=“main-body__sidebar”>
-
-			<ul>
-				<li>list item 1</li>
-				<li>list item 2</li>
-				<li>list item 3</li>
-			</ul>
-
-		</div>
-
-	</div>
+</div>
+```
 
 HTML should be kept as clean and light as possible to ensure speed, maintainability. (and good SEO?) Consider the following.
 
-	<div class=“logo”>
+```
+<div class=“logo”>
 
-		<img src=“logo.jpg” />
+	<img src=“logo.jpg” />
 
-	</div>
+</div>
+```
 
 It would be much better to add the class to the image instead. Targeting individual elements means less markup, less css nesting and more efficient code.
 
-	<img src=“logo.jpg” class=“logo” />
+```
+<img src=“logo.jpg” class=“logo” />
+```
 
 ### Naming convention
 HTML semantics and FE architecture is a difficult task that requires a naming convention in order to ensure that our projects scale well and are maintainable. You can read more about that here.
@@ -109,26 +115,29 @@ In brief
 
 Example
 
-	<div class=“top-bar top-bar- -blue”>
+```
+<div class=“top-bar top-bar- -blue”>
 
-		<div class=“top-bar__info”>
+	<div class=“top-bar__info”>
 
-			<h2>Company name</h2>
-			<p>Company address</p>
-
-		</div>
-
-		<div class=“top-bar__info top-bar__info- -right”>
-
-			<h2>Company name on the right</h2>
-			<p>Company address on the right</p>
-
-		</div>
+		<h2>Company name</h2>
+		<p>Company address</p>
 
 	</div>
 
+	<div class=“top-bar__info top-bar__info- -right”>
+
+		<h2>Company name on the right</h2>
+		<p>Company address on the right</p>
+
+	</div>
+
+</div>
+```
+
 ### Internet Explorer
 As previously mentioned we support IE 8 and above. We may go lower than that, depending on the client.
+
 
 
 - General
@@ -160,20 +169,20 @@ As previously mentioned we support IE 8 and above. We may go lower than that, de
 
 ## HTML
 - MoDuLaR
-- Bad code examples (e.g. <br>)
-- Indentation
+- ~~Bad code examples (e.g. <br>~~)
+- ~~Indentation~~
 - Bugfixes for older browsers (e.g. inline block IE7) adding IE stylesheet if needed conditional
-- Markup examples
+- ~~Markup examples~~
 - Assets paths (global folder structure)
 - Accessibility overview & tips (alt tags, keyboard presses)
 - use of <img> tag (srcset, supplying retina)
-- <!DOCTYPE html>
-- Clean light might up to ensure good SEO and maintainability
-- Use of HTML5
-- <strong> and <em> over <b> and <i> as provide strong/emphasised hints to screen reading software
-- Overuse of structural markup - cleaner the better, target individual elements
+- ~~<!DOCTYPE html>~~
+- ~~Clean light might up to ensure good SEO and maintainability~~
+- ~~Use of HTML5~~
+- ~~<strong> and <em> over <b> and <i> as provide strong/emphasised hints to screen reading software~~
+- ~~Overuse of structural markup - cleaner the better, target individual elements~~
 - Cache-busting string
-- Use of double quotes
+- ~~Use of double quotes~~
 - geolocations
 
 
@@ -199,7 +208,7 @@ As previously mentioned we support IE 8 and above. We may go lower than that, de
 - How modules work
 - Controlling Specificity, how it’s measured and how to work it.
 - CSS hacks
-
+- prefixing
 
 ## JS & other
 - When to use jquery
@@ -209,7 +218,7 @@ As previously mentioned we support IE 8 and above. We may go lower than that, de
 - JS errors debugging
 - Using plugins
 - minifying js on deployment
-- Use of single quotes unless needed in string ("a string that's double quoted”)?
+- Use of single quotes unless needed in string (a string thats double quoted)?
 - No scripts in head
 - Using advanced/js tag for when JS is enabled (progressive enhancement)
 - Javascript patterns (namespaces in objects etc)
@@ -226,3 +235,28 @@ As previously mentioned we support IE 8 and above. We may go lower than that, de
 - Mimify
 - Compression 
 - Gzip
+
+
+- What would be easiest way of rolling agree changes out?
+- Anyone should be able to request anything for change or add something new.
+- Try keep it up to date when we all agree something should be added?
+- Beneficial for testing, good practices and of course Lee and any new employees.
+
+
+
+
+
+
+
+
+
+
+
+
+Examples 
+- https://github.com/styleguide/css
+- http://tmwagency.github.io/TMW-frontend-guidelines/
+- http://cssguidelin.es/
+- http://isobar-idev.github.io/code-standards/
+- https://developers.google.com/web/fundamentals/resources/styleguide/index?hl=en
+- https://developers.google.com/web/fundamentals/principles/
