@@ -143,6 +143,17 @@ As previously mentioned we support IE 8 and above. We may go lower than that, de
 
 As previously outlined in the document it is very difficult to make IE8 and lower look the same as more modern browsers. It’s our duty to ensure the client and project managers are aware of this. Most things can be achieved but it means extra work and therefore we need to be allocated more time. Be sure to check with the client how thorough the support needs to be.
 
+### Folder structure
+Whilst this is a personal preference. It’s important that all HTML projects are structured the same in order to ensure that it’s easy for us to pick projects up, we are aware of what’s where and so that automation tools such as grunt will always run correctly. Our structure looks like the following (need to check this)
+
+- index.html
+- assets
+— js
+— SASS
+— img
+
+ 
+
 
 
 - General
