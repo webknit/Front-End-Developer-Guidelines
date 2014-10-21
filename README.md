@@ -1,6 +1,4 @@
-Developer-Guidelines
-====================
-
+# Developer Guidelines
 
 ## Introduction
 These developer guidelines attempt to outline fundamental aspects of the FE development process. They aim to ensure the team is consistent in all the work that we produce. We aim to continuously update the guidelines as new practices and technologies develop, this provides us with an excellent opportunity to stay on top of our game.
@@ -37,9 +35,11 @@ Where possible we should look to make use of HTML5 markup. However given that we
 HTML5 shiv is a HTML5 IE enabling script. It can be downloaded here, and added to our webpages. The conditional tags ensure that it’s only read by non HTML5 supporting browsers (lower than IE9).
 https://code.google.com/p/html5shiv/
 
-	<!--[if lt IE 9]>
-	<script src="dist/html5shiv.js"></script>
-	<![endif]-->
+```
+<!--[if lt IE 9]>
+<script src="dist/html5shiv.js"></script>
+<![endif]-->
+```
 
 If for some strange reason we need to support media queries in  < IE8 - E.g for demo purposes client side - we could use something like respond.js with the conditional tags as above.
 https://github.com/scottjehl/Respond
@@ -136,7 +136,12 @@ Example
 ```
 
 ### Internet Explorer
-As previously mentioned we support IE 8 and above. We may go lower than that, depending on the client.
+As previously mentioned we support IE 8 and above. We may go lower than that, depending on the client. IE9 is(generally) ok to develop for, but IE8 and below can be troublesome. Here are some things that should be kept in mind:
+
+- IE8 and lower won’t understand some things such as some CSS, CSS3 and media queries.
+- Depending on the client requirements we might need a separate set of styles for IE such as a “fixed” container. These styles should only be loaded when a user needs it (conditional HTML comments).
+
+As previously outlined in the document it is very difficult to make IE8 and lower look the same as more modern browsers. It’s our duty to ensure the client and project managers are aware of this. Most things can be achieved but it means extra work and therefore we need to be allocated more time. Be sure to check with the client how thorough the support needs to be.
 
 
 
@@ -171,7 +176,7 @@ As previously mentioned we support IE 8 and above. We may go lower than that, de
 - MoDuLaR
 - ~~Bad code examples (e.g. <br>~~)
 - ~~Indentation~~
-- Bugfixes for older browsers (e.g. inline block IE7) adding IE stylesheet if needed conditional
+- ~~Bugfixes for older browsers (e.g. inline block IE7) adding IE stylesheet if needed conditional~~
 - ~~Markup examples~~
 - Assets paths (global folder structure)
 - Accessibility overview & tips (alt tags, keyboard presses)
@@ -218,7 +223,7 @@ As previously mentioned we support IE 8 and above. We may go lower than that, de
 - JS errors debugging
 - Using plugins
 - minifying js on deployment
-- Use of single quotes unless needed in string (a string thats double quoted)?
+- Use of single quotes unless needed in string (eg a string with apostrophe)?
 - No scripts in head
 - Using advanced/js tag for when JS is enabled (progressive enhancement)
 - Javascript patterns (namespaces in objects etc)
@@ -241,17 +246,6 @@ As previously mentioned we support IE 8 and above. We may go lower than that, de
 - Anyone should be able to request anything for change or add something new.
 - Try keep it up to date when we all agree something should be added?
 - Beneficial for testing, good practices and of course Lee and any new employees.
-
-
-
-
-
-
-
-
-
-
-
 
 Examples 
 - https://github.com/styleguide/css
