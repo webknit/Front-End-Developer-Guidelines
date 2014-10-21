@@ -154,8 +154,34 @@ assets
 	SASS
 	img
 ```
- 
 
+Meaning assets in our index.html will point to
+
+```
+<img src=“assets/img/logo.jpg” alt=“a logo” />
+```
+
+Each project should have a **README.md** file, especially those in Git. This should contain basic information about the project including, but not limited to
+- Title and what the project is
+- Who is involved in the project (developers, designers etc)
+- Set up information for anyone picking the project up
+- Any other information that could be useful
+
+Additional items are also included in our development template such as the gemfile and gruntfile. These will be covered in more detail further into the document.
+ 
+### Accessibility
+Taken right from W3C website.
+
+> Web accessibility means that people with disabilities can perceive, understand, navigate, and interact with the Web, and that they can contribute to the Web
+
+It’s important that we are aware of the needs of our end users and ensure we are doing what we can to provide equal access and opportunity.
+
+Accessibility could be simply mean increasing a font size so that it’s easily readable, alternately it could be to ensure a website is completely accessible by screen readers. Full accessibility support is time consuming and costly so it’s important that the requirements are outlined at the beginning of a project.
+
+However by default we should have all the ‘Easy checks’ from the  W3C website covered. Please have a read.
+http://www.w3.org/WAI/eval/preliminary.html
+
+There are many tools out there to analyse accessibility if more support is required. A popular one is the WAVE Web Accessibility Tool. http://wave.webaim.org/
 
 
 - General
@@ -191,8 +217,8 @@ assets
 - ~~Indentation~~
 - ~~Bugfixes for older browsers (e.g. inline block IE7) adding IE stylesheet if needed conditional~~
 - ~~Markup examples~~
-- Assets paths (global folder structure)
-- Accessibility overview & tips (alt tags, keyboard presses)
+- ~~Assets paths (global folder structure~~)
+- ~~Accessibility overview & tips (alt tags, keyboard presses~~)
 - use of <img> tag (srcset, supplying retina)
 - ~~<!DOCTYPE html>~~
 - ~~Clean light might up to ensure good SEO and maintainability~~
