@@ -198,11 +198,20 @@ There are many tools out there to analyse accessibility if more support is requi
 
 
 ### Srcset and picture
-Images are one of the most problematic issues on the web, especially since the birth of responsive design.
+As discussed before. Images are one of the most problematic issues on the web. It’s tricky to support different resolutions and sizes. 
 
+For background images we can use CSS media queries to serve the correct size image to the browser, they are discussed in the CSS section.
+The support for foreground images has been seriously lacking and we’ve all been waiting impatiently for browser companies to invent something.
+The Picture element and srcset/sizes attributes seem to be the answer to our prayers. You can read all about them here.
+http://shaneprendergast.co.uk/css/srcset-picture/
+
+> Srcset is about letting go of unnecessary control and trusting the browser to do the right thing for the user, with the user. If you must have specific resources with specific layout breakpoints, it's called art-direction. That's what <picture> is for.  
+	https://twitter.com/yoavweiss/status/524634209768701952
+
+There is no reason **NOT** to use the above solutions as they’re supported, can work in most browsers with the polyfill mentioned in the post above **AND** most importantly the standard syntax has a fallback for non supporting browsers.
 
 ### JS in the HTML
-Where possible there should be **NO** JS in the \<head\> of a HTML document. The issue is that if an error occurs in the head there’s a possibility the rest of the page won’t load.
+Where possible there should be **NO** JS in the \<head\> of a HTML document. If an error occurs in the head there’s a possibility the rest of the page won’t load.
 
 
 - General
