@@ -23,7 +23,7 @@ Testing popular small-screen devices is essential in ensuring that a person’s 
 ## HTML
 Our markup should be well presented, semantically correct and generally valid. We should be writing code that is equally as easy for us developers to read as it is the browser.
 
-### Basics
+### HTML Basics
 - We make use of <!DOCTYPE html> which is supported in all browsers.
 - We use “double” quotes in our HTML
 - We use <strong> and <em> over <b> and <i> as provide strong/emphasised hints to screen reading software
