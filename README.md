@@ -24,10 +24,10 @@ Testing popular small-screen devices is essential in ensuring that a person’s 
 Our markup should be well presented, semantically correct and generally valid. We should be writing code that is equally as easy for us developers to read as it is the browser.
 
 ### HTML Basics
-- We make use of <!DOCTYPE html> which is supported in all browsers.
+- We make use of \<!DOCTYPE html\> which is supported in all browsers.
 - We use “double” quotes in our HTML
-- We use <strong> and <em> over <b> and <i> as provide strong/emphasised hints to screen reading software
-- We don’t use any HTML for styling purposes such as <br>
+- We use \<strong\> and \<em\> over \<b\> and \<i\> as provide strong/emphasised hints to screen reading software
+- We don’t use any HTML for styling purposes such as \<br\>
 - Initialise advanced UI (Javascrip enabled) with a advanced/js tag. Meaning our default styles cater at a basic level and then more is added to those who support it. Progressive enhancement is key.
 - We make our mobile viewport optimisable using the following snippet
  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
