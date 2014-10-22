@@ -29,6 +29,19 @@ Our markup should be well presented, semantically correct and generally valid. W
 - We use <strong> and <em> over <b> and <i> as provide strong/emphasised hints to screen reading software
 - We don’t use any HTML for styling purposes such as <br>
 
+### Page speed
+In additional to neat clean markup, we also need to ensure that our pages are *fast*. In an ideal world our pages should be less than 1MB in weight. However the world isn’t too ideal and with the rise of full width banners and retina screens websites have sacrificed speed for user experience.
+
+> “Did you seriously load 100kb of jQuery UI just so you could animate the fucking background color of a div?“  
+	http://motherfuckingwebsite.com/
+
+Whilst the speed of the sites will generally come down to the budget and requirements of the client, it’s important that we adopt some simple tactics to keep the size of web pages down, such as:
+- Only add things to a page that’s needed. Theres’s no point loading the whole jQuery library just so that you can change the colour of a div, just use JS. Same goes with fonts, plugins, web templates etc. Anything that is in your code but not being utilised properly is a waste.
+- Images should be as small a size as possible without affecting their visual quality. Make use of ‘save for web’ in photoshop. Where possible images should be no higher than 60kb.
+- Make use of vectors(svg) where possible. They’re tiny! Font libraries such as Font Awesome can help with that.
+
+Images and retina support are discussed later in the document.
+
 ### HTML5
 Where possible we should look to make use of HTML5 markup. However given that we still support IE8 as default we don’t generally use HTML5 as it would require extra code/bloat in order to make it work. If the client requests HTML5 and support for lower browsers then that’s something we need to consider. Here are some solutions.
 
@@ -184,6 +197,14 @@ http://www.w3.org/WAI/eval/preliminary.html
 There are many tools out there to analyse accessibility if more support is required. A popular one is the WAVE Web Accessibility Tool. http://wave.webaim.org/
 
 
+### Srcset and picture
+Images are one of the most problematic issues on the web, especially since the birth of responsive design.
+
+
+### JS in the HTML
+Where possible there should be **NO** JS in the \<head\> of a HTML document. The issue is that if an error occurs in the head there’s a possibility the rest of the page won’t load.
+
+
 - General
 	- Browser Support
 - HTML
@@ -228,6 +249,7 @@ There are many tools out there to analyse accessibility if more support is requi
 - Cache-busting string
 - ~~Use of double quotes~~
 - geolocations
+- asynchronous loading, avoid loading in head
 
 
 ## CSS
