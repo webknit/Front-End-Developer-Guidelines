@@ -28,6 +28,9 @@ Our markup should be well presented, semantically correct and generally valid. W
 - We use “double” quotes in our HTML
 - We use <strong> and <em> over <b> and <i> as provide strong/emphasised hints to screen reading software
 - We don’t use any HTML for styling purposes such as <br>
+- Initialise advanced UI (Javascrip enabled) with a advanced/js tag. Meaning our default styles cater at a basic level and then more is added to those who support it. Progressive enhancement is key.
+- We make our mobile viewport optimisable using the following snippet
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 ### Page speed
 In additional to neat clean markup, we also need to ensure that our pages are *fast*. In an ideal world our pages should be less than 1MB in weight. However the world isn’t too ideal and with the rise of full width banners and retina screens websites have sacrificed speed for user experience.
@@ -39,6 +42,7 @@ Whilst the speed of the sites will generally come down to the budget and require
 - Only add things to a page that’s needed. Theres’s no point loading the whole jQuery library just so that you can change the colour of a div, just use JS. Same goes with fonts, plugins, web templates etc. Anything that is in your code but not being utilised properly is a waste.
 - Images should be as small a size as possible without affecting their visual quality. Make use of ‘save for web’ in photoshop. Where possible images should be no higher than 60kb.
 - Make use of vectors(svg) where possible. They’re tiny! Font libraries such as Font Awesome can help with that.
+- Make use of dns-prefetch to increase the speed of things such as  google analytics, jquery, typeset etc. http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers
 
 Images and retina support are discussed later in the document.
 
@@ -211,7 +215,15 @@ http://shaneprendergast.co.uk/css/srcset-picture/
 There is no reason **NOT** to use the above solutions as they’re supported, can work in most browsers with the polyfill mentioned in the post above **AND** most importantly the standard syntax has a fallback for non supporting browsers.
 
 ### JS in the HTML
-Where possible there should be **NO** JS in the \<head\> of a HTML document. If an error occurs in the head there’s a possibility the rest of the page won’t load.
+Where possible there should be **NO** JS in the \<head\> of a HTML document. This reduces the effects of delays imposed by script loading on other page components.
+Scripts should be concatenated and minified for performance, our grunt set up does that for us on deployment. If you’re using plugins or libraries the same rules still apply, they should be consolidated to save on http requests.
+
+If using jQuery we should look to use a CDN where possible and use a fallback should that not be accessible
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.11.1.min.js"><\/script>')</script>
+
+ 
 
 
 - General
@@ -324,3 +336,5 @@ Examples
 - http://isobar-idev.github.io/code-standards/
 - https://developers.google.com/web/fundamentals/resources/styleguide/index?hl=en
 - https://developers.google.com/web/fundamentals/principles/
+
+- JS code - http://javascript.crockford.com/code.html
