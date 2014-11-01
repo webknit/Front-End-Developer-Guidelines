@@ -224,7 +224,58 @@ If using jQuery we should look to use a CDN where possible and use a fallback sh
 	<script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.11.1.min.js"><\/script>')</script>
 
  
+## CSS
+CSS is probably the most abused FE development language. It’s vital our CSS is well constructed and neat. 
+Some good characteristics of CSS include:-
+	- Well structured
+	- Neat 
+	- Low specificity
+	- Modular/reusable
 
+We primarily use SASS to write our CSS but for smaller projects we might want to use vanilla CSS.
+
+### CSS Basics
+- We don’t write inline styles, keep markup and styles separate
+- We **avoid** !important rules 
+- We use the <link> tag to include, never @import
+- We keep it DRY! (Don’t repeat yourself)
+- We avoid using ID’s as too specific
+- We write our CSS alphabetically 
+- We use em’s/rems over pxs
+
+### CSS syntax
+We make good use of line breaks, indent and whitespace to make our code neat and maintainable.
+Some things to note.
+- class name followed by one space
+- Open brackets and new line
+- One indent (4 spaces)
+- Write css alphabetically in the following format, attribute, colons, space, value, colon.
+- Close brackets on separate line on same vertical axis that the class started
+- Group related CSS properties together (no line breaks)
+- Break (two line breaks) and title different modules within the CSS document.
+
+```
+/*** SIDEBAR STYLES ***/
+.sidebar {
+	color: red;
+	font-size: 1.2em;
+	width: 100%;
+}
+.sidebar a {
+	color: black;
+	padding: 2em;
+}
+
+
+/*** MAIN BODY STYLES ***/
+
+.main-body {
+	margin: 0 auto;
+	width: 80%;
+}
+.main-body a {
+}
+```
 
 - General
 	- Browser Support
@@ -271,6 +322,7 @@ If using jQuery we should look to use a CDN where possible and use a fallback sh
 - ~~Use of double quotes~~
 - geolocations
 - asynchronous loading, avoid loading in head
+- Comments in HTML
 
 
 ## CSS
