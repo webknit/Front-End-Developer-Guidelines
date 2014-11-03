@@ -1,4 +1,4 @@
-# Developer Guidelines
+# Front End Developer Guidelines
 
 ## Introduction
 These developer guidelines attempt to outline fundamental aspects of the FE development process. They aim to ensure the team is consistent in all the work that we produce. We aim to continuously update the guidelines as new practices and technologies develop, this provides us with an excellent opportunity to stay on top of our game.
