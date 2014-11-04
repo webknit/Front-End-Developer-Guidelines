@@ -112,5 +112,8 @@ if (typeof console !== 'undefined') // Check for console { 	! console.log('Deb
 #### Plugins
 There are many fantastic plugins out there and that can assist us when making websites. Be sure to find a plugin and pick what’s best for your project. For smaller JS functionality, such as a popup box, we should be writing our own code.
 
+#### Coding without JS
+All projects should work in some manner with or without JS disabled, even if it’s just a case of having an error message explaining why.. 
+Think about your project from the start and consult with your designer how things should work. 
 
 

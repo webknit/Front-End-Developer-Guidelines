@@ -2,22 +2,14 @@
 
 ## Generic stuff
 - ~~Browser support (IE8+?)/ Base stuff~~
-- Filenames
-- Testing (checklist)
-- 4 spaces == tab
-- Process (FE to BE, how should be handed over tempting etc)
-- Commenting (good as gets removed when)
-- DRY (applies to everything)
-- Setting up projects, grunt
-- Git and committing code.
-- File structure
-- Serving fonts
-- Source control, committing with git
-- Process
-
+- ~~Filenames~~
+- ~~4 spaces == tab~~
+- ~~Process (FE to BE, how should be handed over tempting etc~~)
+- ~~Commenting (good as gets removed when~~)
+- ~~DRY (applies to everything~~)
 
 ## HTML
-- MoDuLaR
+- ~~MoDuLaR~~
 - ~~Bad code examples (e.g. <br>~~)
 - ~~Indentation~~
 - ~~Bugfixes for older browsers (e.g. inline block IE7) adding IE stylesheet if needed conditional~~
@@ -83,10 +75,16 @@
 
 
 ## Deployment
+- Testing (checklist)
 - Mimify
 - Compression 
 - Gzip
 
+## Git
+Git and committing code.
+
+## Grunt
+Setting up projects, grunt
 
 - What would be easiest way of rolling agree changes out?
 - Anyone should be able to request anything for change or add something new.
