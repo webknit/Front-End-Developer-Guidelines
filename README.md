@@ -83,13 +83,14 @@ Testing popular small-screen devices is essential in ensuring that a person’s 
 - ~~Controlling Specificity, how it’s measured and how to work it~~.
 - CSS hacks
 - ~~prefixing~~
+- advanced class for JS
 
 ## JS & other
 - ~~When to use jquery~~
 - ~~Linking jquery (library etc~~)
-- Structure of code (modular, DRY)
+- ~~Structure of code (modular, DRY~~)
 - Ajax guidelines
-- JS errors debugging
+- ~~JS errors debugging~~
 - Using plugins
 - minifying js on deployment
 - ~~Use of single quotes unless needed in string (eg a string with apostrophe~~)?
