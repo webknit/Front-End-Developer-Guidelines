@@ -71,6 +71,25 @@ var button = $(‘.button’);
 button.addClass(‘active’).click(callMe).removeClass(‘active’);
 ```
 
+#### Advanced tag
+Following on from our progressive enhancement approach we add a class to the body of our website when JS **IS** enabled. We mainly use this to write conditional css when JS is enabled.
+
+```
+<script>document.documentElement.className += ' advanced';</script>
+
+// CSS
+// Show the popup if JS isn’t enabled.
+.popup {
+	display: block
+}
+// Hide it if JS is enabled as we can implement it with JS
+// when a button is clicked or something
+.advanced .popup {
+	display: none;
+}
+
+```
+
 #### Debugging
 Make use of the console to debug code. make good use of console.log to figure out what’s going on in your code.
 
