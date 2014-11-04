@@ -1,7 +1,7 @@
 # Front End Developer Guidelines
 
 ## Generic stuff
-- Browser support (IE8+?)/ Base stuff
+- ~~Browser support (IE8+?)/ Base stuff~~
 - Filenames
 - Testing (checklist)
 - 4 spaces == tab
