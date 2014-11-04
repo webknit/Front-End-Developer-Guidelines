@@ -229,7 +229,7 @@ If we’re making changes to a project that’s already live there’s a good ch
 <script src”assets/js/script.js?=V2”> 
 
  
-## [CSS](CSS.md)
+## CSS
 CSS is probably the most abused FE development language. It’s vital our CSS is well constructed and neat. 
 Some good characteristics of CSS include:-
 	- Well structured
