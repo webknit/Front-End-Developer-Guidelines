@@ -86,14 +86,14 @@ Testing popular small-screen devices is essential in ensuring that a person’s 
 
 ## JS & other
 - ~~When to use jquery~~
-- Linking jquery (library etc)
+- ~~Linking jquery (library etc~~)
 - Structure of code (modular, DRY)
 - Ajax guidelines
 - JS errors debugging
 - Using plugins
 - minifying js on deployment
-- Use of single quotes unless needed in string (eg a string with apostrophe)?
-- No scripts in head
+- ~~Use of single quotes unless needed in string (eg a string with apostrophe~~)?
+- ~~No scripts in head~~
 - Using advanced/js tag for when JS is enabled (progressive enhancement)
 - Javascript patterns (namespaces in objects etc)
 
