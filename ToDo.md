@@ -51,7 +51,7 @@
 - ~~Controlling Specificity, how it’s measured and how to work it~~.
 - CSS hacks
 - ~~prefixing~~
-- advanced class for JS
+- ~~advanced class for JS~~
 
 ## JS & other
 - ~~When to use jquery~~
@@ -63,7 +63,7 @@
 - ~~minifying js on deployment~~
 - ~~Use of single quotes unless needed in string (eg a string with apostrophe~~)?
 - ~~No scripts in head~~
-- Using advanced/js tag for when JS is enabled (progressive enhancement)
+- ~~Using advanced/js tag for when JS is enabled (progressive enhancement~~)
 - Javascript patterns (namespaces in objects etc)
 
 

@@ -17,6 +17,7 @@ Testing popular small-screen devices is essential in ensuring that a person’s 
 - We avoid using !important at all times when building from scratch. If you’re having to add that then you need to go back and rework your code. There may be **rare** exceptions when code is out of our control.
 - Comment as much as possible, they are removed when compiled in JS and CSS. Don’t hesitate to create a readme file for other devs.
 - Keep it **DRY** (Don’t repeat yourself).
+- Websites should be as small in weight as possible to ensure they load fast.
 
 
 ## Filenames
