@@ -20,7 +20,7 @@ Testing popular small-screen devices is essential in ensuring that a person’s 
 - We prefer readability over compression, especially with compile tools. 
 - We avoid using !important at all times when building from scratch. If you’re having to add that then you need to go back and rework your code. There may be **rare** exceptions when code is out of our control.
 
-## HTML
+## [HTML](CSS.md)
 Our markup should be well presented, semantically correct and generally valid. We should be writing code that is equally as easy for us developers to read as it is the browser.
 
 ### HTML Basics
