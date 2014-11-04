@@ -15,3 +15,11 @@ Testing popular small-screen devices is essential in ensuring that a person’s 
 - We keep our content, presentation and behaviour separate.
 - We prefer readability over compression, especially with compile tools. 
 - We avoid using !important at all times when building from scratch. If you’re having to add that then you need to go back and rework your code. There may be **rare** exceptions when code is out of our control.
+
+## Filenames
+This applies to images as well as files.
+
+- Use all lowercase names, saves messing about
+- Some OS have restrictions on filenames so don’t use any special characters, you should only use the letters a-z, A-Z, the numbers 0-9, hyphens (-) and underscores (_).
+- Don’t use any spaces 
+- Keep filenames as logical and short as possible.
