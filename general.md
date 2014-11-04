@@ -29,7 +29,7 @@ This applies to images as well as files.
 - Keep filenames as logical and short as possible.
 
 ## FE to BE process
-If you’re working on a project that requires some BE work then please ensure that the hangover is sufficient. 
+If you’re working on a project that requires some BE work then please ensure that the handover is sufficient. 
 
 Make the code as well structured as possible splitting reusable sections such as header and footer into separate files instead of duplicating code in multiple files.
 
