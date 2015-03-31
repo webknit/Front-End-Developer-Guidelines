@@ -89,7 +89,7 @@ As previously mentioned in the HTML section we make use of a naming convention i
 Lats make use of the examples from the HTML naming conversion section and elaborate on how the CSS works with the naming convention.
 
 ```
-<div class=“top-bar top-bar- -blue”>
+<div class=“top-bar top-bar--blue”>
 
 	<div class=“top-bar__info”>
 
@@ -98,7 +98,7 @@ Lats make use of the examples from the HTML naming conversion section and elabor
 
 	</div>
 
-	<div class=“top-bar__info top-bar__info- -right”>
+	<div class=“top-bar__info top-bar__info--right”>
 
 		<h2>Company name on the right</h2>
 		<p>Company address on the right</p>
@@ -114,7 +114,7 @@ We write the SASS like this.
 .top-bar {
 	background: black;
 	width: 100%;
-	&- -blue {
+	&--blue {
 		background: blue;
 	}
 	&__info {
@@ -135,7 +135,7 @@ Which outputs (Remembers If you’re writing CSS then this is how it should look
 	width: 100%;
 }
 
-.top-bar- - blue {
+.top-bar--blue {
 	background; blue;
 }
 
@@ -144,7 +144,7 @@ Which outputs (Remembers If you’re writing CSS then this is how it should look
 	float: left;
 }
 
-.top-bar__info- - right {
+.top-bar__info--right {
 	float: right;
 }
 ```
@@ -398,7 +398,7 @@ If a button, header or any element appears more then once then define it as a gl
 	color: black;
 }
 
-<a class=“btn btn- -white”>Click me</a>
+<a class=“btn btn--white”>Click me</a>
 ```
 
 .btn contains the structure for the button and we simple add the  btn- - white to change the background colour.
