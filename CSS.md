@@ -393,7 +393,7 @@ If a button, header or any element appears more then once then define it as a gl
 	padding: 10px;
 }
 
-.btn- -white {
+.btn--white {
 	background: white;
 	color: black;
 }
