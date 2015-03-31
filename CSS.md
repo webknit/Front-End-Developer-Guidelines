@@ -120,7 +120,7 @@ We write the SASS like this.
 	&__info {
 		background: white;
 		float: left;
-		&- - right {
+		&--right {
 			float: right;
 		}
 	}
